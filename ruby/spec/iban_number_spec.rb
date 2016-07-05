@@ -20,6 +20,7 @@ describe IBAN::Number do
     it_is_valid_for 'Denmark', 'DK50 0040 0440 1162 43'
     it_is_valid_for 'Norway',  'NO93 8601 1117 947'
     it_is_valid_for 'Sweden',  'SE35 5000 0000 0549 1000 0003'
+    it_is_valid_for 'United Kingdom',  'GB82 WEST 1234 5698 7654 32'
 
     it 'is invalid for an empty string' do
       iban = IBAN::Number.new('')
