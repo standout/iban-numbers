@@ -22,12 +22,18 @@ describe IBAN::Number do
     it_is_valid_for 'Sweden',  'SE35 5000 0000 0549 1000 0003'
 
     it 'is invalid for an empty string' do
+      iban = IBAN::Number.new('')
+      expect(iban).not_to be_valid
     end
 
     it 'is invalid for an unknown country code' do
+      iban = IBAN::Number.new('WW')
+      expect(iban).not_to be_valid
     end
 
     it 'is invalid for mismatching check digits' do
+      iban = IBAN::Number.new('SE34 5000 0000 0549 1000 0003')
+      expect(iban).not_to be_valid
     end
   end
 end
