@@ -9,7 +9,7 @@ http://www.nordea.com/en/our-services/cashmanagement/iban-validator-and-informat
 was used for example IBAN numbers.
 
 There are three main sections, `Go`, `JavaScript` and `Ruby`. Each section
-contains a test suite that can be run against any given implementation.
+contains a test suite that can be run against the given implementation.
 
 ## Run tests
 
