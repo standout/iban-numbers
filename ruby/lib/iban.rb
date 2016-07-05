@@ -29,6 +29,8 @@ module IBAN
 
     def validate_check_digits
       @iban = "#{@iban[4..-1]}#{@iban[0,4]}"
+      # .ord returns the integer ordinal of a one-character string.
+      # A.ord = 65 and should start at 10, therefore the - 55.
       digits = @iban.gsub(/[A-Z]/) { |char| char.ord - 55 }
       if digits.to_i % 97 == 1
         true
